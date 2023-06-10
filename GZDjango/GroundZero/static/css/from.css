@@ -1,0 +1,123 @@
+
+:root{
+    --morado:#200a5c;
+    --azulOscuro:#222b50;
+    --azulclaro:#0084ff;
+    --blanco:#fff;
+    --fuente:'Quicksand', sans-serif;
+}
+/* respondent el alto y el ancho*/
+html{
+    box-sizing: border-box;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+/* propiedad de la fuente */
+body{
+    font-family: var(--fuente);
+    background-color: var(--azulOscuro);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+.imagen-formulario{
+    background-image: url('../img/formulario/HD-wallpaper-earth-agent-2080.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    flex: 0 0 calc(50%);
+    position: relative;
+    
+}
+.imagen-formulario::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   
+   
+}
+/*  */
+@media(min-width:768px){
+    .imagen-formulario{
+        height: auto;
+        background-position: right;
+    }
+
+}
+/* */
+@media(min-width:1200px){
+    .imagen-formulario{
+        background-position: center;
+    }
+}
+
+@media(min-width:768px){
+    .contenedor-formulario{
+        display: flex;
+    }
+}
+
+.formulario{
+    padding: 60px;
+    background-color: var(--morado);
+}
+.textoformulario h2, .txt_field label,.password-registro, .password-olvidada , .textoformulario p{
+    color: var(--blanco);
+}
+.textoformulario h2{
+    font-size: 40px;
+    text-align: center;
+}
+.textoformulario p{
+    font-size: 22px;
+    text-align: center;
+}
+.txt_field label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.password-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+#registro{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.txt_field input{
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+}
+.txt_field input[type="submit"]{
+    background-color: var(--azulclaro);
+    color: var(--blanco);
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    transition: background-color .3s ease-in-out;
+}
+.txt_field input [type="submit"]:hover{
+  
+    cursor: pointer;
+    background-color: var(--azulOscuro);
+}
