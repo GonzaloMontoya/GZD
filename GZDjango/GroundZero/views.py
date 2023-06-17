@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import VistaObra, Artista
 
 # Create your views here.
 
@@ -9,11 +9,9 @@ def base(request):
 def index(request):
     return render(request, 'index.html')
 
-def obras(request):
-    return render(request, 'obras.html')
 
-def artistas(request):
-    return render(request, 'artistas.html')
+# def artistas(request):
+#     return render(request, 'artistas.html')
 
 def baseproducto(request):
     return render(request, 'baseproducto.html')
@@ -26,3 +24,19 @@ def login(request):
 
 def register(request):
     return render(request, 'register.html')
+
+#--------------------------
+# def obras(request):   
+    # return render(request, 'obras.html')
+
+
+
+def obras(request):
+    obras = VistaObra.objects.all()
+    context = {"obras":obras}
+    return render(request, 'obras.html', context)
+
+def artistas(request):
+    artistas  = Artista.objects.all()
+    context = {"artistas":Artista}
+    return render(request, 'artistas.html', context)

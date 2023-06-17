@@ -11,8 +11,8 @@
     </div>
 </div>
     <div class="boxGZ">
-
-        <div class="dreamGZ">
+        
+        <!-- <div class="dreamGZ">
             <img src="{% static 'img/Pinturas/Palacio.png' %}"  height="462" alt="">
             
             
@@ -85,8 +85,25 @@
             
             <img src="{% static 'img/Pinturas/Flores/ColoresFR.png' %}" height="450"alt="">
             <img src="{% static 'img/Pinturas/Retratos/MBronceR.png' %}" height="450"alt="">
+        </div> -->
+        
+        <div class="dreamGZ">
+            {% for cur in VistaObra %}
+           
+            <img src="{{cur.img.url}}" height="450"alt="">
+            
+            <a target="_blank" 
+            href="#">
+            <img src="{{cur.img.url}}" height="450"alt=""></a>
+            
+            
+            <img src="{{cur.img.url}}" height="450"alt="">
+            <img src="{{cur.img.url}}" height="450"alt="">
+            {% endfor %}
         </div>
+        
     </div>
+
 
 
 {% endblock %}
