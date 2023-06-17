@@ -3,8 +3,10 @@ from django.db import models
 # Create your models here.
 
 class VistaObra(models.Model):
-    nombreV = models.CharField(max_length=50)
+    nombreV = models.CharField(max_length=50, null=False, blank = False)
     imgVista = models.ImageField(upload_to='img/', null= False, blank= False)
+    def __str__(self):
+        return str(self.nombreV)
    
 class Artista(models.Model):
     nombreAr    = models.CharField(max_length=50, null=False, blank=False)

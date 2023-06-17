@@ -38,5 +38,5 @@ def obras(request):
 
 def artistas(request):
     artistas  = Artista.objects.all()
-    context = {"artistas":Artista}
+    context = {"artistas":artistas}
     return render(request, 'artistas.html', context)

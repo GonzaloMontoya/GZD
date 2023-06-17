@@ -19,24 +19,28 @@
                
         <h1 style="color: black;">Artistas <hr></h1>
    </div>
+
     <div class="cuerpoGZ">
-        
+
         <div class="containeerGZ" style="box-sizing: border-box;" >
-            <div class="cardGZ">
-              
+        {% for ar in artistas %}
+         <div class="cardGZ">
+                
                 <figure>
-                    <img src="{{ar.img.url}}" style="width: 410px; height: 410px;" alt="">
-                </figure> 
+                    <img src="{{ar.fotoAr.url}}" style="width: 410px; height: 410px;" alt="">
+                </figure>
+
                 <div class="contenidoGZ">
-                    <h3>Mary Gilbert</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nobis explicabo impedit beatae
-                        commodi blanditiis at hic, modi consequatur laborum?</p>
-                      
+                    <h3>{{ar.nombreAr}} {{ar.apellidoAr}}</h3>
+                    <p>{{ar.descAr}}</p>
+                    <br>
                     <a href="#">Ver más</a>
                 </div>
-                
+    
             </div>
-            <div class="cardGZ">
+
+            {%endfor%}
+           <!-- <div class="cardGZ">
                 <figure>
                     <img src="{% static 'img/Artistas/OlsenMontgomery.jfif' %}" style="width: 410px; height: 410px;" alt="">
                 </figure>
@@ -68,9 +72,10 @@
                         commodi blanditiis at hic, modi consequatur laborum?</p>
                     <a href="#">Ver más</a>
                 </div>
-            </div>
+            </div>  -->
         </div>
+
+
     </div>
-
-
+  
 {%endblock%}
