@@ -525,6 +525,27 @@
 }
 
 
+.pruebabtn{
+    background-color: red;
+}
+.Tituloartista{
+    margin-top: 5cm;
+               margin-bottom: -3cm;
+               margin-left: 10%;
+               margin-right: 10%;
+               /* max-width: 1000px;  */
+               width: 80%;
+               justify-content: center;
+               text-align: center; 
+               box-sizing: border-box;
+               display: block;
+               position: relative;
+               flex-wrap: wrap;
+}
+.Tituloartista h1{
+    font-size: bold;
+    background: #000;
+}
 /* Galería de obras */
 
 .container1GZ{
@@ -581,7 +602,7 @@
 }
 .IntroGZ{
     
-    display: block;
+    display: inline-block;
     text-align: center;
     justify-content: center;
     margin-top: -4cm;
@@ -601,7 +622,7 @@
     .container1GZ .boxGZ{
         flex-direction: column;
     }
-    .container1GZ .boxGZ .dreamGZ{ /*REvisar drean*/
+    .container1GZ .boxGZ .dreamGZ{ 
         width: 100%;
     }
 }

@@ -5,23 +5,45 @@
 {% block body %}
 {% load static %}
 
-   <div style="margin-top: 5cm;
+   <div class="Titutloartista" 
+   style="     margin-top: 5cm;
                margin-bottom: -3cm;
                margin-left: 10%;
                margin-right: 10%;
-               max-width: 1000px; 
+               /* max-width: 1000px;  */
+               width: 80%;
                justify-content: center;
                text-align: center; 
                box-sizing: border-box;
                display: block;
                position: relative;
                flex-wrap: wrap;">
-               
-        <h1 style="color: black;">Artistas <hr></h1>
-   </div>
+   
+        <h1 style="color: black;">Artistas <hr style="height:3px; background: black;"></h1>  
+        <div>
+            <a href="#" style=" 
+            display: block;
+            justify-content: center;
+            flex-wrap: wrap;
+                text-align: center;   
+                text-decoration: none;
+                display: inline-block;
+                padding: 5px;
+                margin-top: 10px; 
+                font-size: small;
+                color:var(--bg-color); 
+                background-color: var(--text-color);
+                width: 100px;
+                border-radius: 20px;
+                border: 1px solid var(--ho-color);
+                transition: all 400ms ease;">Gestionar</a>
+    </div>
 
+    </div> 
+
+    
     <div class="cuerpoGZ">
-
+        
         <div class="containeerGZ" style="box-sizing: border-box;" >
         {% for ar in artistas %}
          <div class="cardGZ">
@@ -40,42 +62,7 @@
             </div>
 
             {%endfor%}
-           <!-- <div class="cardGZ">
-                <figure>
-                    <img src="{% static 'img/Artistas/OlsenMontgomery.jfif' %}" style="width: 410px; height: 410px;" alt="">
-                </figure>
-                <div class="contenidoGZ">
-                    <h3>Olsen Montgomery</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nobis explicabo impedit beatae
-                        commodi blanditiis at hic, modi consequatur laborum?</p>
-                    <a href="#">Ver más</a>
-                </div>
-            </div>
-            <div class="cardGZ">
-                <figure>
-                    <img src="{% static 'img/Artistas/NaomiThompson.jfif' %}" style="width: 410px; height: 410px;" alt="">
-                </figure>
-                <div class="contenidoGZ">
-                    <h3>Naomi Thompson</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nobis explicabo impedit beatae
-                        commodi blanditiis at hic, modi consequatur laborum?</p>
-                    <a href="#">Ver más</a>
-                </div>
-            </div>
-            <div class="cardGZ">
-                <figure>
-                    <img src="{% static 'img/Artistas/TylerRoberson.jfif' %}" style="width: 410px; height: 410px;" alt="">
-                </figure>
-                <div class="contenidoGZ">
-                    <h3>Tyler Roberson</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nobis explicabo impedit beatae
-                        commodi blanditiis at hic, modi consequatur laborum?</p>
-                    <a href="#">Ver más</a>
-                </div>
-            </div>  -->
         </div>
-
-
     </div>
   
 {%endblock%}
