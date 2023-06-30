@@ -1,0 +1,47 @@
+{% extends "../base.html" %} 
+
+{% block title %} GZ | Gestión {% endblock %}
+
+{% block body %}
+{% load static %}
+
+    <body>
+    
+        <div class="tableGZ">
+            <div class="table_headerGZ">
+                <p>Artista</p>
+                <div>
+                    <input placeholder = "Artista">
+                    <button class="add_newGZ">+ Agregar</button>
+                </div>
+            </div>
+            <div class="table_sectionGZ">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Imagen</th>
+                            <th>Gestionar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>01</td>
+                            <td>Maxwell</td>
+                            <td>Denisse</td>
+                            <td><img src="/media/img/MaryGilbert.jpg"></td>
+                            <td>
+                                <button><i class="fa-solid fa-file-pen"></i></button>
+                                <button><i class="fa-solid fa-trash"></i></button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+{% endblock %}

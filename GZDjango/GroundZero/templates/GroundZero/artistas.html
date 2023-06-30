@@ -6,7 +6,7 @@
 {% load static %}
 
    <div class="Titutloartista" 
-   style="     margin-top: 5cm;
+        style="margin-top: 5cm;
                margin-bottom: -3cm;
                margin-left: 10%;
                margin-right: 10%;
@@ -21,7 +21,7 @@
    
         <h1 style="color: black;">Artistas <hr style="height:3px; background: black;"></h1>  
         <div>
-            <a href="#" style=" 
+            <a href="{% url 'gestArtista' %}" style=" 
             display: block;
             justify-content: center;
             flex-wrap: wrap;
@@ -37,10 +37,10 @@
                 border-radius: 20px;
                 border: 1px solid var(--ho-color);
                 transition: all 400ms ease;">Gestionar</a>
+        </div> 
     </div>
 
-    </div> 
-
+    
     
     <div class="cuerpoGZ">
         

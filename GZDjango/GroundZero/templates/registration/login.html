@@ -1,29 +1,32 @@
-
-{% extends "./baseingreso.html"%}
+{% extends "../GroundZero/baseingreso.html"%}
 
 {% block title%} GZ | Login {% endblock %}
 
 {% block body %}
 {% load static %}
 
-<!-- login-->
+<!-- Login -->
+<body>
     <div class="contenedor-formulario contenedor">
         <div class="imagen-formulario">
         </div>
-        <form class="formulario" id="formularioa">
+
+        <form class="formulario" id="formularioa" method="post">
+
+            {% csrf_token %}
             <div class="textoformulario">
                 <h2>login</h2>
                 <p>login de la cuenta</p>
             </div>
             <div class="txt_field">
-                <ion-icon name="person-outline"></ion-icon>
+                <!-- <ion-icon name="person-outline"></ion-icon> -->
                 <label for="usuario1">Usuario</label>
-                <input placeholder="Ingresa tu nombre" type="text" id="usuario1" >
+                <input placeholder="Ingresa tu nombre" type="text" name="username" id="usuario1" >
             </div>
             <div class="txt_field">
-                <ion-icon name="lock-closed-outline"></ion-icon>
+                <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
                 <label  name="lock-closed-outline"for="contraseña">Contraseña </label>
-                <input placeholder="Ingresa tu contraseña" type="password" id="contraseña" >
+                <input placeholder="Ingresa tu contraseña" type="password" name="password" id="contraseña" >
             </div>
             <div class="txt_field">
                 <input type="submit" value="Login">
@@ -37,7 +40,7 @@
             <div id="message" class=""></div>
         </form>       
     </div>    
-
+</body>
 {% endblock %}    
 
 

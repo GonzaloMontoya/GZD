@@ -1,10 +1,15 @@
 
 :root{
-    --morado:#200a5c;
+    --bg-color: #12162B;
+    --text-color: #fff;
+    --main-color:  #171d36;
+    --ho-color: #222b50;
+     /*Colores dif*/
+    /* --morado:#200a5c;
     --azulOscuro:#222b50;
     --azulclaro:#0084ff;
     --blanco:#fff;
-    --fuente:'Quicksand', sans-serif;
+    --fuente:'Quicksand', sans-serif; */
 }
 /* respondent el alto y el ancho*/
 html{
@@ -17,7 +22,7 @@ html{
 /* propiedad de la fuente */
 body{
     font-family: var(--fuente);
-    background-color: var(--azulOscuro);
+    background-color: var(--bg-color);
     display: flex;
     align-items: center;
     height: 100vh;
