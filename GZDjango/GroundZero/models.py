@@ -13,7 +13,7 @@ class Artista(models.Model):
     idAr        = models.CharField(primary_key=True, max_length=6, null=False, verbose_name='idAr')
     nombreAr    = models.CharField(max_length=50, null=False, blank=False, verbose_name='nombreAr')
     apellidoAr  = models.CharField(max_length=50, null=True, blank=True, verbose_name='apellidoAr')
-    fotoAr      = models.ImageField(upload_to='img/', null=True, blank=True, verbose_name='fotoAr')
+    fotoAr      = models.ImageField(upload_to='img/', null=False, blank=False, verbose_name='fotoAr')
     descAr      = models.CharField(max_length=250, null=False, blank=False, verbose_name='descAr')
     fechaIngr   = models.DateField(blank=False, null=False, verbose_name='fechaIgr')
 
