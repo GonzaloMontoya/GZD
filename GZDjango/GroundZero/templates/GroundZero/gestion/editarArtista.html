@@ -1,0 +1,33 @@
+{% extends "../base.html" %}
+
+{%block title%} GZ | Edición {% endblock %}
+
+{% block body %}
+
+<body class="InputGZ" style="margin-top: 2cm; display: block;">
+
+    <div class="TitutloEdicion" 
+        style="margin-top: 5cm;
+        margin-bottom: 1.5cm;
+        margin-left: 10%;
+        margin-right: 10%;
+        /* max-width: 1000px;  */
+        width: 80%;
+        justify-content: center;
+        text-align: center; 
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        flex-wrap: wrap;">
+
+        <h1 style="color: black;">Edición <hr style="height:3px; background: black;"></h1> 
+    </div> 
+
+    <div class="wrapperGZ" style="margin-left: 35%; margin-right: 35%; margin-top: 2cm; margin-bottom: 20cm; width: 34%;">
+
+        <div class="input-dataGZ" style="margin-bottom: -5cm;">
+            {% include 'GroundZero/gestion/form.html' %}
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -8,11 +8,16 @@ urlpatterns = [
 
     #Vistas
     path('base', views.base, name='base'),
-    path('baseproducto', views.baseproducto, name='baseproducto'),
+    path('producto', views.producto, name='producto'),
     path('baseingreso', views.baseingreso, name='baseingreso'),
     path('', views.index, name='index'),
     path('artistas', views.artistas, name='artistas'),
     path('obras', views.obras, name='obras'),
+
+
+    path('agregarArtista', views.agregarArtista, name='agregarArtista'),
+    path('editarArtista/<idAr>', views.editarArtista, name='editarArtista'),
+    path('borrarArtista/<idAr>', views.borrarArtista, name='borrarArtista'),
     path('gestArtista', views.gestArtista, name='gestArtista'),
     
 

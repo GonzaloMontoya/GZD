@@ -525,9 +525,6 @@
 }
 
 
-.pruebabtn{
-    background-color: red;
-}
 .Tituloartista{
     margin-top: 5cm;
                margin-bottom: -3cm;
@@ -639,12 +636,13 @@
 
 
 
-/* TABLA DE DATOS */
-body{
+/* TABLA DE DATOS
+body .talbaGZ{
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
 
 }
+
 .tableGZ{
     width: 100%;
 
@@ -758,7 +756,7 @@ tr:hover td{
 
 ::-webkit-scrollbar-thumb{
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
+} */
 
 
 

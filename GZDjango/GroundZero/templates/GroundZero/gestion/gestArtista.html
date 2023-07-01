@@ -5,14 +5,15 @@
 {% block body %}
 {% load static %}
 
-    <body>
-    
+    <!-- <body class="talbaGZ"> -->
+ 
+        <div>
         <div class="tableGZ">
             <div class="table_headerGZ">
-                <p>Artista</p>
+                <p>Artistas</p>
                 <div>
-                    <input placeholder = "Artista">
-                    <button class="add_newGZ">+ Agregar</button>
+                    <input placeholder = "Artistas">
+                    <a class="add_newGZ" href = "{% url 'agregarArtista' %}" style="border-radius: 10px;">+ Agregar</a>
                 </div>
             </div>
             <div class="table_sectionGZ">
@@ -23,25 +24,34 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Imagen</th>
-                            <th>Gestionar</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for ar in artistas %}
                         <tr>
 
-                            <td>01</td>
-                            <td>Maxwell</td>
-                            <td>Denisse</td>
-                            <td><img src="/media/img/MaryGilbert.jpg"></td>
-                            <td>
+                            <td>{{ar.idAr}}</td>
+                            <td>{{ar.nombreAr}}</td>
+                            <td>{{ar.apellidoAr}}</td>
+                            <td><img src="{{ar.fotoAr.url}}" alt=""></td>
+                            
+                            <td><a href="editarArtista/{{ar.idAr}}" class="EditarGZ"><i class="fa-solid fa-file-pen" style="background-color: #222b50; color: #fff; padding: 10px 6px 10px 10px; border-radius: 5px; margin-left: .8mm;"></i></a></td>
+                            <td><a href="borrarArtista/{{ar.idAr}}" class="BorrarGZ"><i class="fa-solid fa-trash" style="background-color: #c5226b; color: #fff; padding: 10px 10px 10px 10px; border-radius: 5px; margin-left: .8mm;"></i></a></td>
+                            
+                        <!--<td>
                                 <button><i class="fa-solid fa-file-pen"></i></button>
+
                                 <button><i class="fa-solid fa-trash"></i></button>
-                            </td>
+                            </td> -->
 
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
-    </body>
+    <!-- </body> -->
+    
 {% endblock %}

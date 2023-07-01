@@ -1,0 +1,41 @@
+<form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <fieldset>
+        {% for dato in Datos %}
+        <div class="tableGZ">
+            {% if dato.field.widget.input_type == 'file' and dato.value %}
+            <td><img src="/media/{{dato.value}}" alt="" width="200px"></td>
+            {% endif %}
+            <input class="input-dataGZ"
+            type="{{dato.field.widget.input_type}}" 
+            id="" 
+            name="{{dato.name}}" 
+            placeholder="{{dato.name}}"
+            value="{{dato.value | default:''}}"
+            required style="margin-bottom: -10cm">
+        </div>
+
+        {% endfor %}
+        <div style="text-align: center;">
+            <button class="btnAddGZ" type="submit" 
+            style="margin-top: .5cm; 
+            /* display: block; */
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;   
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px;
+            margin-top: 1cm; 
+            margin-bottom: 1cm; 
+            font-size: small;
+            color:var(--bg-color); 
+            background-color: var(--text-color);
+            width: 100px;
+            border-radius: 20px;
+            border: 1px solid var(--ho-color); 
+            transition: all 400ms ease;">Confrimar</button>
+        </div>
+
+    </fieldset>
+</form>
