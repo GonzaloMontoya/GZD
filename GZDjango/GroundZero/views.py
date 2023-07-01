@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import VistaObra, Artista
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
@@ -34,6 +34,7 @@ def artistas(request):
     context = {"artistas":artistas}
     return render(request, 'GroundZero/artistas.html', context)
 
+@login_required
 def gestArtista(request):
     artistas  = Artista.objects.all()
     context = {"artistas":artistas}
@@ -42,15 +43,19 @@ def gestArtista(request):
 # def agregarArtista(request):
 #     return render(request, "GroundZero/gestion/agregarArtista.html")
 
+# def editarArtista(request):
+#     return render(request, "GroundZero/gestion/editarArtista.html")
 
 
 #CRUD gestión de artistas
 
+@login_required
 def borrarArtista(request, idAr):
     artistas = Artista.objects.get(idAr=idAr)
     artistas.delete()
     return redirect('gestArtista')
 
+@login_required
 def agregarArtista(request):
     Datos = ArtistaForm(request.POST or None, request.FILES or None)
     if Datos.is_valid():
@@ -58,6 +63,10 @@ def agregarArtista(request):
         return redirect('gestArtista')
     return render(request, "GroundZero/gestion/agregarArtista.html", {"Datos":Datos})
 
+
+##No funcional pero despliega datos
+
+@login_required
 def editarArtista(request, idAr):
     artistas = Artista.objects.get(idAr=idAr)
     Datos = ArtistaForm(request.POST or None, request.FILES or None, instance=artistas)
@@ -65,10 +74,27 @@ def editarArtista(request, idAr):
         Datos.save()
         return redirect('gestArtista')
     return render(request, "GroundZero/gestion/editarArtista.html", {"Datos":Datos})
-    
 
-# def editarArtista(request):
-#     return render(request, "GroundZero/gestion/editarArtista.html")
+
+## No funciona y no despliega nada ## (Debe ser por el contador en "form.html")
+# @login_required    
+# def editarArtista(request, idAr):
+    
+#     artistas = get_object_or_404(Artista, idAr=idAr)
+
+#     data = {
+#         'form': ArtistaForm(instance=artistas)
+#     }
+
+#     if request.method == 'POST':
+#         Datos = ArtistaForm(data=request.POST, instance=artistas, files=request.FILES)
+#         if Datos.is_valid():
+#             Datos.save()
+#             return redirect(to="gestArtista")
+#         data["form"] = Datos
+
+#     return render(request, "GroundZero/gestion/editarArtista.html", data)
+
 
 
 
