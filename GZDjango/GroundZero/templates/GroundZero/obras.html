@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+
+{% block title %} GZ | Obras {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<div class="container1GZ">
+    <div class="headingGZ">
+        <h3>Galería de obras</h3>
+    </div>
+</div>
+    <div class="boxGZ">
+        
+        <div class="dreamGZ">
+            {% for cur in obras %}
+           
+            <a target="_blank" 
+            href="#">
+            <img src="{{cur.imgVista.url}}" height="450" alt=""></a>
+            
+            {% endfor %}
+        </div>
+        
+    </div>
+
+
+
+{% endblock %}

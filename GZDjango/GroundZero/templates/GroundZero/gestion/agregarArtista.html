@@ -1,0 +1,80 @@
+{% extends "../base.html" %}
+
+{%block title%} GZ | Agregar {% endblock %}
+
+{% block body %}
+{% load static %}
+<body class="InputGZ" style="margin-top: 2cm; display: block;">
+
+    <div class="TitutloGestion" 
+        style="margin-top: 5cm;
+        margin-bottom: 1.5cm;
+        margin-left: 10%;
+        margin-right: 10%;
+        /* max-width: 1000px;  */
+        width: 80%;
+        justify-content: center;
+        text-align: center; 
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        flex-wrap: wrap;">
+
+        <h1 style="color: black;">Gestión <hr style="height:3px; background: black;"></h1> 
+    </div> 
+
+    <div class="wrapperGZ" style="margin-left: 35%; margin-right: 35%; margin-top: 2cm; margin-bottom: 20cm; width: 34%;">
+
+        <div class="input-dataGZ" style="margin-bottom: -5cm;">
+            {% include 'GroundZero/gestion/form.html' %}
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+
+<!-- <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="wrapperGZ" style="margin-left: 35%; margin-right: 35%; margin-top: 2cm; margin-bottom: 2cm; width: 34%;">
+        <div class="input-dataGZ">
+            <input type="text" required>
+            <div class="underlineGZ"></div>
+            <label>Id</label>
+        </div>
+        
+        <div class="input-dataGZ">
+            <input type="text" required>
+            <div class="underlineGZ"></div>
+            <label>Nombre</label>
+        </div>
+        
+        <div class="input-dataGZ">
+            <input type="text" required>
+            <div class="underlineGZ"></div>
+            <label>Apellido</label>
+        </div>
+        <div style="text-align: center; margin-top: -0.5cm; margin-bottom: 0.5cm;">
+            <input type="file" required>
+        </div>
+
+        <div style=" text-align: center;">
+            <button class="btnAddGZ" type="submit" style="margin-top: .5cm; 
+            display: block;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;   
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px;
+            margin-top: 10px; 
+            font-size: small;
+            color:var(--bg-color); 
+            background-color: var(--text-color);
+            width: 100px;
+            border-radius: 20px;
+            border: 1px solid var(--ho-color);
+            transition: all 400ms ease;">Agregar</button>
+        </div>
+
+    </div>
+</form>    -->

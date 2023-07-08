@@ -1,0 +1,266 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+
+}
+
+.tableGZ{
+    width: 100%;
+    /* padding-top: 1.5cm; */
+    margin-top: 1.5cm;
+
+}
+
+.table_headerGZ{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    flex-wrap: wrap;
+}
+
+.table_headerGZ p{
+    /* color: #000000; */
+    color: #12162B;
+    margin-left: 1.8cm;
+    font-size: larger;
+
+}
+
+
+.add_newGZ{
+
+    padding: 10px 20px ;
+    color: #ffffff;
+    background-color: #222b50;
+    
+    
+}
+
+button{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+    
+
+}
+td .EditarGZ a{
+    background-color: #222b50;
+}
+
+td a:nth-child(2){
+    background-color: #c5226b;
+}
+/* td button:nth-child(1){
+    background-color: #222b50   ;
+}
+td:hover button:nth-child(1){
+    background-color: #222b50;
+    color: #c5226b;
+    
+} */
+/* td button:nth-child(2){
+    background-color: #c5226b;
+}
+td:hover button:nth-child(2){
+    color: #222b50;
+    background-color: #c5226b;
+} */
+
+
+.add_newGZ button{
+    padding: 10px;
+    /* padding-left: 2cm; */
+    /* margin-left: 5cm; */
+}
+input{
+    padding: 10px 20px;
+    margin: 0 10px;
+    outline: none;
+    border: 1px solid #222b50;
+    border-radius: 6px;
+    color: #12162B;
+}
+
+.table_sectionGZ{
+    height: 650px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #8493a5;
+    font-size: 15px;
+}
+
+th, td{
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+    
+
+}
+td{
+    color: #171d36;
+}
+td .EditarGZ{
+    padding: 10px 10px 10px;
+}
+
+td img{
+    height: 60px;    
+    width: 60px;
+    object-fit:  scale-down;
+    border-radius: 15px;
+    border: 1.5px solid #222b50;
+}
+/* td img:hover{
+    border: 1.5px solid #c5226b;
+} */
+
+tr:hover td{
+    color: #a8386a;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+
+::placeholder{
+    color: #12162bce;
+}
+/* 
+::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+} */
+
+
+
+/* Tabla  edición */
+
+.InputGZ{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+.wrapperGZ{
+    width: 450px;
+    background: #fff;
+    padding: 0px;
+    padding-bottom: 255px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+}
+.wrapperGZ .input-dataGZ{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-bottom: .5cm;
+    
+}
+
+.wrapperGZ .input-dataGZ input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+
+}
+
+.wrapperGZ .input-dataGZ label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-dataGZ input:focus ~ label,
+.input-dataGZ input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #12162B;
+
+}
+.input-dataGZ{
+    padding-left: -10px;
+}
+
+.wrapperGZ .input-dataGZ .underlineGZ{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.input-dataGZ .underlineGZ::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #a8386a;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-dataGZ input:focus ~ .underlineGZ::before,
+.input-dataGZ input:valid ~ .underlineGZ::before{
+    transform: scaleX(1);
+
+}
+
+.btnAddGZ{
+    /* text-align: center;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    content: center; */
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;   
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px; 
+    font-size: small;
+    color:var(--bg-color); 
+    background-color: var(--text-color);
+    width: 100px;
+    border-radius: 20px;
+    border: 1px solid var(--ho-color);
+    transition: all 400ms ease;
+    
+}

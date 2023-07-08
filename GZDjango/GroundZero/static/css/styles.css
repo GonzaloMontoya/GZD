@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
@@ -525,6 +525,24 @@
 }
 
 
+.Tituloartista{
+    margin-top: 5cm;
+               margin-bottom: -3cm;
+               margin-left: 10%;
+               margin-right: 10%;
+               /* max-width: 1000px;  */
+               width: 80%;
+               justify-content: center;
+               text-align: center; 
+               box-sizing: border-box;
+               display: block;
+               position: relative;
+               flex-wrap: wrap;
+}
+.Tituloartista h1{
+    font-size: bold;
+    background: #000;
+}
 /* Galería de obras */
 
 .container1GZ{
@@ -581,7 +599,7 @@
 }
 .IntroGZ{
     
-    display: block;
+    display: inline-block;
     text-align: center;
     justify-content: center;
     margin-top: -4cm;
@@ -601,7 +619,7 @@
     .container1GZ .boxGZ{
         flex-direction: column;
     }
-    .container1GZ .boxGZ .dreamGZ{ /*REvisar drean*/
+    .container1GZ .boxGZ .dreamGZ{ 
         width: 100%;
     }
 }
@@ -618,6 +636,127 @@
 
 
 
+/* TABLA DE DATOS
+body .talbaGZ{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+
+}
+
+.tableGZ{
+    width: 100%;
+
+}
+
+.table_headerGZ{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    flex-wrap: wrap;
+}
+
+.table_headerGZ p{
+    color: #000000;
+
+}
+
+.add_newGZ{
+    padding: 10px 20px ;
+    color: #ffffff;
+    background-color: #0298cf;
+    
+    
+}
+
+button{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+}
+
+td button:nth-child(1){
+    background-color: #0298cf;
+}
+
+td button:nth-child(2){
+    background-color: #f80000;
+}
+
+.add_newGZ button{
+    padding: 10px;
+}
+
+input{
+    padding: 10px 20px;
+    margin: 0 10px;
+    outline: none;
+    border: 1px solid #0298cf;
+    border-radius: 6px;
+    color: #0298cf;
+}
+
+.table_sectionGZ{
+    height: 650px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #8493a5;
+    font-size: 15px;
+}
+
+th, td{
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+}
+
+td img{
+    height: 60px;    
+    width: 60px;
+    object-fit:  scale-down;
+    border-radius: 15px;
+    border: 1.5px solid #8493a5;
+}
+
+tr:hover td{
+    color: #0298cf;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+
+::placeholder{
+    color: #0298cf;
+}
+
+::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+} */
 
 
 
@@ -637,9 +776,7 @@
 
 
 
-
-
-
+/* JC */
 html{
     box-sizing: border-box;
 }
