@@ -1,0 +1,48 @@
+{% extends "../GroundZero/baseingreso.html"%}
+
+{% block title %} GZ | Login {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<!-- login-->
+    <div class="contenedor-formulario contenedor">
+        <div class="imagen-formulario">
+        </div>
+        <form class="formulario"   method="post">
+
+            {% csrf_token %}
+            <div class="textoformulario">
+                <h2>login</h2>
+                <p>login de la cuenta</p>
+            </div>
+            <div class="txt_field">
+                
+                <label for="usuario1"><ion-icon name="person-outline"></ion-icon> Usuario  </label>
+                <input placeholder="Ingresa tu nombre" type="text" name="username" id="usuario1" >
+            </div>
+            <div class="txt_field">
+                <label  name="lock-closed-outline"for="contraseña">   <ion-icon name="lock-closed-outline"></ion-icon> Contraseña </label>
+                <input placeholder="Ingresa tu contraseña" type="password" name="password" id="contraseña" >
+            </div>
+
+            <div class="txt_field">
+                <input type="submit" value="Login">
+            </div>
+
+            <div class="password-olvidada ">
+                ¿Olvidaste tu contraseña?<a href="#"> Aquí</a>
+            </div>
+
+            <div class="password-registro" >
+                Regístrate aquí <a href="{% url 'register' %}"> Regístrate</a>
+            </div>
+
+            <div id="message" class=""></div>
+        </form>       
+    </div>    
+
+{% endblock %}    
+
+
+

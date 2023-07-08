@@ -1,0 +1,58 @@
+{% extends "../GroundZero/baseingreso.html" %}
+
+{%block title%} GZ | Register {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<!-- Registro ingreso -->
+    <div class="contenedor-formulario contenedor">
+        <div class="imagen-formulario">
+        </div>
+
+
+        <form class="formulario"  method="post">
+                <div class="textoformulario">
+                <h2>Registro</h2>
+        <form method="post">
+            <div class="txt_field">
+                
+                <label><ion-icon name="person-outline"></ion-icon>Nombre Usuario</label>
+                <input type="text" required minlength="4"
+                    pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}"
+                    title="solo letras" autocomplete="off">
+            </div>
+
+            <div class="txt_field">
+                
+                <label><ion-icon name="mail-outline"></ion-icon>Correo electrónico</label>
+                <input type="email" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                    title="considera formato" autocomplete="off" />
+            </div>
+
+
+
+
+            <div class="txt_field">
+                
+                <label for="userPassword"><ion-icon name="lock-closed-outline"></ion-icon>Contraseña</label>
+                <input type="password" id="userPassword" required minlength="8"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$"
+                    title="Debe contener al menos 8 caracteres, incluyendo al menos una letra minúscula, una mayúscula y un número">
+            </div>
+
+            <div class="txt_field">
+                
+                <label for="confirmPassword"><ion-icon name="lock-closed-outline"></ion-icon>Confirmar contraseña</label>
+                <input type="password" id="confirmPassword" required minlength="8"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$" title="no es igual">
+            </div>
+            <div class="txt_field">
+                <input type="submit" value="registro">
+            </div>
+            <div class="link_Ayuda">
+                ¿Olvidó su contraseña? <a href="#"> Clic aquí</a>
+            </div>
+    </div>
+
+{% endblock %}
