@@ -1,0 +1,65 @@
+{% extends "./baseingreso.html" %}
+{% block title%} GZ| Contactos {% endblock%}
+{% load static %}
+
+{% block body %}
+
+<body>
+
+    
+    <!-- formulario de contacto-->
+    <div class="content ">
+                <div class="border-animation">
+                <h1 class="brand animated bounceInDown">Formulario de Contacto</h1>
+        </div>
+                <div class="contact-wrapper animated bounceInUp">
+                    <div class="contact-info animated">
+                        <h4>Envia la información </h4>
+                        <p>Detalla la esencia de tu trabajo artístico, añadiendo una imagen que represente tu estilo único.</p>
+                        
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i>  (España)</li>
+                            <li><i class="fas fa-phone"></i> (911)</li>
+                            <li><i class="fas fa-envelope-open-text"></i> gellermo@gmail.com</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="contact-form animated">
+                        
+                        <form action="">
+                            <p>
+                                <label for="fullname">Nombre y apellidos</label>
+                                <input type="text" name="fullname">
+                            </p>
+                            <p>
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" name="email">
+                            </p>
+                            <p>
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" name="phone">
+                            </p>
+                            <p>
+                                <label for="formacion">Formación</label>
+                                <input type="text" name="formacion">
+                            </p>
+                            <p class="block">
+                               <label for="message">Mensaje</label> 
+                                <textarea name="message" rows="5"></textarea>
+                            </p>
+                            <p class="block">
+                                <button class="animated tada delay-1s">
+                                    Enviar
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                  
+                </div>
+        
+            </div>
+          
+
+</body>
+
+{% endblock %}
