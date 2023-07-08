@@ -1,0 +1,112 @@
+{% extends "./base.html" %}
+
+{%block title%} GZ | Inicio {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<div class="IntroGZ">
+    <section class="Intro1GZ">
+        <h1 style="padding-top: 5cm; color: black;">GroundZero
+            <hr style="margin-bottom: 1cm;">
+        </h1>
+        <div style="margin-bottom: 5cm;">
+            <p style="font-size: 12px; display: block; margin-left: 40px; margin-right: 40px; text-align: center;">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, quia odit eius quas quod magni
+                quo consequuntur perspiciatis, magnam animi aut consectetur quaerat. Dolorum laboriosam repellendus
+                amet nulla id necessitatibus fuga atque aut voluptate doloremque? Enim voluptatum obcaecati
+                nesciunt, ab, molestias nemo aut saepe dolor blanditiis consectetur amet pariatur minus magnam
+                impedit, unde ducimus a. Consequatur nam quam repellendus reiciendis officiis ducimus perspiciatis
+                neque qui nihil voluptates, aliquam repudiandae necessitatibus repellat nesciunt cumque consequuntur
+                laborum tempora id ullam quidem accusamus optio minima. Ullam quasi ut dolore? Quae reiciendis
+                dignissimos eveniet ad sed, repellat corrupti ex reprehenderit debitis, quos quibusdam ducimus.
+            </p>
+        </div>
+    </section>
+</div>
+
+<!-- Carrusel -->
+<div class="slideshow-containerGZ">
+    <div class="mySlides fade">
+        <div class="numbertextGZ"> 1/6 </div>
+        <img src="{% static 'img/Destacados/MrBlueR.png' %}"
+            style="width: 510px; height: 507px; padding-left: 1.3cm; border-radius: 6px;" alt="">
+
+        <div class="PGZ">
+            <h1>Mr.Blue </h1>
+            <hr>
+            <p style="font-size: medium; padding-top: 5px;">Denussy</p>
+        </div>
+
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertextGZ"> 2/6 </div>
+        <img src="{% static 'img/Destacados/BlueghostR.png' %}"
+            style="width: 510px; height: 507px; padding-left: 1.3cm; border-radius: 6px;" alt="">
+
+        <div class="PGZ">
+            <h1>Blue Ghost</h1>
+            <hr>
+            <p style="font-size: medium; padding-top: 5px;">Denussy</p>
+        </div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertextGZ"> 3/6 </div>
+        <img src="{% static 'img/Destacados/MrblueSkyR.png' %}"
+            style="width: 510px; height: 507px; padding-left: 1.3cm; border-radius: 6px;" alt="">
+
+        <div class="PGZ">
+            <h1>Mr.BlueSky </h1>
+            <hr>
+            <p style="font-size: medium; padding-top: 5px;">Denussy</p>
+        </div>
+
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertextGZ"> 4/6 </div>
+        <img src="{% static 'img/Destacados/PetalosR.png' %}"
+            style="width: 510px; height: 507px; padding-left: 1.3cm; border-radius: 6px;" alt="">
+
+        <div class="PGZ">
+            <h1>Petals</h1>
+            <hr>
+            <p style="font-size: medium; padding-top: 5px;">Denussy</p>
+        </div>
+
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertextGZ"> 5/6 </div>
+        <img src="{% static 'img/Destacados/SkyR.png' %}"
+            style="width: 510px; height: 507px; padding-left: 1.3cm; border-radius: 6px;" alt="">
+        <div class="PGZ">
+            <h1>Sky</h1>
+            <hr>
+            <p style="font-size: medium; padding-top: 5px;">Denussy</p>
+        </div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertextGZ"> 6/6 </div>
+        <img src="{% static 'img/Destacados/SolongR.png' %}"
+            style="width: 510px; height: 507px; padding-left: 1.3cm; border-radius: 6px;" alt="">
+        <div class="PGZ">
+            <h1>So long</h1>
+            <hr>
+            <p style="font-size: medium; padding-top: 5px;">Denussy</p>
+        </div>
+    </div>
+    <a class="prevGZ" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="nextGZ" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+<div style="text-align: center;">
+    <span class="dot" onclick="currentSlides(1)"></span>
+    <span class="dot" onclick="currentSlides(2)"></span>
+    <span class="dot" onclick="currentSlides(3)"></span>
+    <span class="dot" onclick="currentSlides(4)"></span>
+    <span class="dot" onclick="currentSlides(5)"></span>
+    <span class="dot" onclick="currentSlides(6)"></span>
+
+</div>
+
+{% endblock %}
