@@ -104,3 +104,7 @@ def login(request):
 
 def register(request):
     return render(request, "GroundZero/register.html")
+
+def login_re(request):
+    logout(request)
+    return redirect( "/")
